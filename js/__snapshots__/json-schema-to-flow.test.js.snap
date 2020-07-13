@@ -38,6 +38,7 @@ exports[`root schema type 1`] = `
         equipments?: EquipmentType[],
         boil?: BoilProcedureType[],
         packaging?: PackagingProcedureType[],
+        batches?: BatchType[],
     |}
 "
 `;

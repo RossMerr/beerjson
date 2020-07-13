@@ -1,0 +1,112 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/batch.json",
+    "type": "object",
+    "additionalProperties": false,
+    "definitions": {
+        "BatchType": {
+            "type": "object",
+            "description": "BatchType used to record a recipe batch and any measured values.",
+            "additionalProperties": false,
+            "properties": {
+                "recipe": {
+                    "description": "The recipe used",
+                    "$ref": "recipe.json#/definitions/RecipeType"
+                },
+                "equipment": {
+                    "type": "array",
+                    "description": "The brewing equipment used",
+                    "items": {
+                        "$ref": "equipment.json#/definitions/EquipmentType"
+                    }
+                },
+                "batch_size": {
+                    "description": "The volume into the fermenter.",
+                    "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "mash_pH": {
+                    "description": "The mash pH.",
+                    "$ref": "measureable_units.json#/definitions/AcidityType"
+                },
+                "pre-boil_gravity": {
+                    "description": "The gravity of wort before the boil.",
+                    "$ref": "measureable_units.json#/definitions/GravityType"
+                },
+                "original_gravity": {
+                    "description": "The gravity of wort when transffered to the fermenter.",
+                    "$ref": "measureable_units.json#/definitions/GravityType"
+                },
+                "final_gravity": {
+                    "description": "The gravity of beer at the end of fermentation.",
+                    "$ref": "measureable_units.json#/definitions/GravityType"
+                },
+                "alcohol_by_volume": {
+                    "$ref": "measureable_units.json#/definitions/PercentType"
+                },
+                "efficiency": {
+                    "description": "The efficiency, including conversion, and brewhouse.",
+                    "$ref": "#/definitions/EfficiencyType"
+                },
+                "packaged_volume": {
+                    "type": "array",
+                    "description": "The volume into the packaging.",
+                    "items": {
+                        "$ref": "measureable_units.json#/definitions/VolumeType"
+                    }
+                },
+                "fermentation_date": {
+                    "description": "The start of the fermentation.",
+                    "$ref": "measureable_units.json#/definitions/DateType"
+                },
+                "packing_date": {
+                    "description": "The start of the packaging.",
+                    "$ref": "measureable_units.json#/definitions/DateType"
+                },
+                "readings": {
+                    "type": "array",
+                    "description": "Any data logged from the fermentation.",
+                    "items": {
+                        "$ref": "batch.json#/definitions/ReadingType"
+                    }
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "taste": {
+                    "description": "Used to store subjective tasting notes, and rating.",
+                    "$ref": "#/definitions/TasteType"
+                }
+            },
+            "required": [
+                "recipe"
+            ]
+        },
+        "ReadingType": {
+            "type": "object",
+            "description": "A data point of any data logged from the fermentation.",
+            "additionalProperties": false,
+            "properties": {
+                "date_time": {
+                    "description": "The date/time of the data point.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "original_gravity": {
+                    "description": "The measured gravity from the fermenter.",
+                    "$ref": "measureable_units.json#/definitions/GravityType"
+                },
+                "final_gravity": {
+                    "description": "The measured gravity from the fermenter.",
+                    "$ref": "measureable_units.json#/definitions/GravityType"
+                },
+                "temperature": {
+                    "description": "The measured temperature from the fermenter.",
+                    "$ref": "measureable_units.json#/definitions/TemperatureType"
+                }
+            },
+            "required": [
+                "date_time"
+            ]
+        }
+    }
+}

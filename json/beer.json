@@ -100,7 +100,14 @@
           "items": {
             "$ref": "packaging.json#/definitions/PackagingProcedureType"
           }
-        }
+        },
+        "batches": {
+          "type": "array",
+          "description": "A collection of all planned, current and previous batches.",
+          "items": {
+              "$ref": "batch.json#/definitions/BatchType"
+          }
+      }
       },
       "required": [
         "version"

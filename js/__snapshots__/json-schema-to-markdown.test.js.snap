@@ -159,6 +159,7 @@ exports[`root schema docs 1`] = `
 | **equipments** |  | array of [EquipmentType](equipment.json.md#equipmenttype)| Provides necessary information for brewing equipment. |
 | **boil** |  | array of [BoilProcedureType](boil.json.md#boilproceduretype)| A collection of steps providing process information for common boil procedures. |
 | **packaging** |  | array of [PackagingProcedureType](packaging.json.md#packagingproceduretype)| A collection of steps providing process information for common packaging procedures. |
+| **batches** |  | array of [BatchType](batch.json.md#batchtype)| A collection of all planned, current and previous batches. |
 "
 `;
 
