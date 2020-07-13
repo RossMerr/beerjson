@@ -102,10 +102,10 @@
           }
         },
         "batches": {
-          "$id": "https://raw.githubusercontent.com/RossMerr/beerjson/56_quantities/json/batch.json",
           "type": "array",
           "description": "A collection of all planned, current and previous batches.",
           "items": {
+            
               "$ref": "batch.json#/definitions/BatchType"
           }
       }

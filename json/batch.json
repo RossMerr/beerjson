@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/RossMerr/beerjson/56_quantities/json/batch.json",
+    "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/batch.json",
     "type": "object",
     "additionalProperties": false,
     "definitions": {
@@ -45,7 +45,7 @@
                 },
                 "efficiency": {
                     "description": "The efficiency, including conversion, and brewhouse.",
-                    "$ref": "#/definitions/EfficiencyType"
+                    "$ref": "recipe.json#/definitions/EfficiencyType"
                 },
                 "packaged_volume": {
                     "type": "array",
@@ -74,7 +74,7 @@
                 },
                 "taste": {
                     "description": "Used to store subjective tasting notes, and rating.",
-                    "$ref": "#/definitions/TasteType"
+                    "$ref": "recipe.json#/definitions/TasteType"
                 }
             },
             "required": [

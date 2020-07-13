@@ -20,5 +20,6 @@ ajv.addSchema(require('../json/packaging_vessel'))
 ajv.addSchema(require('../json/boil'))
 ajv.addSchema(require('../json/boil_step'))
 ajv.addSchema(require('../json/timing'))
+ajv.addSchema(require('../json/batch'))
 
 module.exports = ajv.compile(require('../json/beer'))
