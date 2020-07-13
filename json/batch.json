@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/batch.json",
+    "$id": "https://raw.githubusercontent.com/RossMerr/beerjson/56_quantities/json/batch.json",
     "type": "object",
     "additionalProperties": false,
     "definitions": {
